@@ -1,0 +1,22 @@
+dist
+
+# macOS
+.DS_Store
+
+# Editors
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+.venv/
+
+# Archives & temporary
+*.zip
+*.tar
+*.tar.gz
+
+# Logs
+*.log
+
+
