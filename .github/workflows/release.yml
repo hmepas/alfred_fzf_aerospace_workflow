@@ -22,10 +22,16 @@ jobs:
           chmod +x ./build.zsh
           ./build.zsh
 
+      - name: List artifacts
+        run: |
+          ls -lah dist || true
+          test -n "$(ls -1 dist/*.alfredworkflow 2>/dev/null || true)" || { echo "No .alfredworkflow artifact found"; exit 1; }
+
       - name: Create GitHub Release and upload asset
         uses: softprops/action-gh-release@v2
         with:
           files: dist/*.alfredworkflow
+          fail_on_unmatched_files: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
