@@ -12,6 +12,7 @@ Fast fuzzy search and focus of AeroSpace windows via Alfred 5.
 ## Usage
 - Keyword: aw
 - Type to fuzzy‑search by app name and window title; press Enter to focus the window
+- Each item shows prefix like `[W:<workspace>@M:<monitor>]` for quick context
 
 ## Build Locally
 ./build.zsh
